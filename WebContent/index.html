@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <style>
+    .container{
+      display:flex;
+      flex-direction:column;
+      //margin-left:300px;
+    }
+    header{
+      background-image:url('상단바.png');
+      background-repeat: no-repeat;
+      padding:10px;
+      padding-left:150px;
+      font-size:1.3rem;
+      color:white;
+      font-weight:bold;
+    }
+    .content{
+      display:flex;
+      flex-direction:row;
+    }
+    .content>nav{
+      border-right:1px solid gray;
+      padding-right:20px;
+      padding:30px;
+    }
+    .content>nav>button{
+      width:120px;
+      height:35px;
+      padding:5px;
+      margin-bottom:30px;
+      background-color:rgb(130, 127, 122);
+      border-radius:8px;
+      color:white;
+      font-weight:bold;
+    }
+    main{
+      padding:10px;
+    }
+    #log_out{
+      background-color:orange;
+    }
+    #inform{
+      background-color:black;
+      color:white;
+      height:30px;
+      width:500px;
+      margin:25px;
+      font-weight:bold;
+      font-size:1.5rem;
+      text-align:center;
+    }
+    .status{
+      width:100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      광운대 U-Campus
+    </header>
+    <section class="content">
+    <nav>
+      <button>강의계획서 조회</button><br />
+      <button>수업시간표</button><br />
+      <button>공지사항</button><br />
+      <button>강의자료실</button><br />
+      <button>과제제출</button><br />
+      <button>학습현황 조회</button><br />
+      <button>수강/성적 조회</button><br />
+      <button id="log_out">로그아웃</button><br />
+    </nav>
+    <main>
+      <textarea id="inform" name="name" rows="3" cols="30">
+      </textarea>
+      <img src="유저.png" />
+      <input type="text" class="status"/><br />
+      <input type="text" class="status"/><br />
+      <textarea id="DB_RESULT">
+
+      </textarea>
+    </main>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#inform").html('종합서비스 공지사항');
+  });
+</script>
+</html>
